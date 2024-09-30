@@ -1,6 +1,8 @@
+// The host URL
+const HOST= 'http://54.160.85.89';
 window.addEventListener('load', function () {
   // task 3
-  $.ajax('http://0.0.0.0:5001/api/v1/status').done(function (data) {
+  $.ajax('http://${HOST}/api/v1/status/').done(function (data) {
     if (data.status === 'OK') {
       $('#api_status').addClass('available');
     } else {
